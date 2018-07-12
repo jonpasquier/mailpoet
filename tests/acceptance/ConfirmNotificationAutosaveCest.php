@@ -2,8 +2,8 @@
 namespace MailPoet\Test\Acceptance;
 class ConfirmNotificationAutosaveCest {
   function confirmNotificationAutosave(\AcceptanceTester $I) {
-    $I->wantTo('Create and configure post notification email');
-    $newsletter_title = 'Post Notification ' . \MailPoet\Util\Security::generateRandomString();
+    $I->wantTo('Confirm post notifications autosave correctly');
+    $newsletter_title = 'Post Notification Autosave Test ' . \MailPoet\Util\Security::generateRandomString();
     $I->login();
     $I->amOnMailpoetPage('Emails');
     $I->click('[data-automation-id=\'new_email\']');
