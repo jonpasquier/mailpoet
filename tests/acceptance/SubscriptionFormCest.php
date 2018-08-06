@@ -5,7 +5,7 @@ namespace MailPoet\Test\Acceptance;
 use Codeception\Util\Locator;
 
 class SubscriptionFormCest {
-  const CONFIRMATION_MESSAGE_TIMEOUT = 20;
+  const CONFIRMATION_MESSAGE_TIMEOUT = 30;
 
   function __construct() {
     $this->subscriber_email = 'test-form@example.com';
@@ -37,6 +37,7 @@ class SubscriptionFormCest {
   }
 
   function subscriptionFormIframe(\AcceptanceTester $I) {
+    $I->wait(10);
     $I->wantTo('Subscribe using iframe form');
 
     $I->amOnPage('/form-test');
