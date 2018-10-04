@@ -2,6 +2,7 @@
 namespace MailPoet\Test\Acceptance;
 class NewsletterPreviewCest {
   function previewStandardNewsletter(\AcceptanceTester $I) {
+
     $I->wantTo('Preview standard newsletter in browser from editor');
     $newsletter_title = 'Testing Preview Newsletter ' . \MailPoet\Util\Security::generateRandomString();
     $I->login();
@@ -21,9 +22,10 @@ class NewsletterPreviewCest {
     $I->waitForElement($title_element);
     $I->seeInCurrentUrl('mailpoet-newsletter-editor');
     $I->fillField($title_element, $newsletter_title);
-    $I->click('Preview', '#mailpoet_editor_sidebar');
-    $I->waitForText('View in browser');	
-    $I->click('View in browser','#mailpoet_editor_sidebar');
-    $I->waitForText('Newsletter Preview','#mailpoet_popup');
+
+    $I->openEmailDesignerSidebarSection('Preview');
+
+    $I->click('View in browser');
+    $I->waitForText('Newsletter Preview');
   }
 }

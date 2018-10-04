@@ -55,4 +55,20 @@ class AcceptanceTester extends \Codeception\Actor {
     $I->waitForText($page, 5);
   }
 
+  /**
+   * Open email designer sidebar section
+   *
+   * @param string $section_name
+   */
+  public function openEmailDesignerSidebarSection($section_name) {
+    $I = $this;
+    // Click on the section heading with the right name
+    $selector = '//*[contains(@class, "mailpoet_sidebar_region")]//h3[text()="'.$section_name.'"]';
+    $I->seeElement($selector);
+    $I->scrollTo($selector);
+    $I->click($selector);
+
+    // Wait for the section to become open, which is when it loses the .closed class
+    $I->waitForElement(sprintf('%s/ancestor::*[contains(@class, "mailpoet_sidebar_region") and not(contains(@class, "closed"))]', $selector));
+  }
 }
