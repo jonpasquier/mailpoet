@@ -60,10 +60,10 @@ class AcceptanceTester extends \Codeception\Actor {
     $I = $this;
     $I->amOnPage('/wp-admin');
     $I->waitForText('MailPoet', 10);
-    $I->click('MailPoet');
-    $I->waitForText($page, 5);
-    $I->click($page);
-    $I->waitForText($page, 5);
+    $mailpoet_menu_selector = '[id="toplevel_page_mailpoet-newsletters"]';
+    $I->moveMouseOver($mailpoet_menu_selector);
+    $I->click($page, $mailpoet_menu_selector);
+    $I->waitForText($page, 3, '[id="wpbody"]');
   }
 
   /**

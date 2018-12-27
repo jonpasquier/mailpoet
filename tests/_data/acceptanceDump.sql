@@ -936,7 +936,7 @@ INSERT INTO `mp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (9,	1,	'show_admin_bar_front',	'true'),
 (10,	1,	'mp_capabilities',	'a:1:{s:13:\"administrator\";b:1;}'),
 (11,	1,	'mp_user_level',	'10'),
-(12,	1,	'dismissed_wp_pointers',	''),
+(12,	1,	'dismissed_wp_pointers',	'wp496_privacy'),
 (13,	1,	'show_welcome_panel',	'1'),
 (4843,	1,	'session_tokens',	'a:1:{s:64:\"b03a2c35276aedd79dc3bdbce369fb630800df7b6d5523b33d9f7ec5d0e888ac\";a:4:{s:10:\"expiration\";i:1510098379;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36\";s:5:\"login\";i:1509925579;}}'),
 (4844,	1,	'mp_user-settings',	'editor=tinymce&editor_expand=on'),
