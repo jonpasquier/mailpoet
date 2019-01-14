@@ -17,7 +17,7 @@ use PHPUnit\Framework\MockObject\MockObject;
 
 class WorkerTest extends \MailPoetTest {
 
-  /** @var Scheduler */
+  /** @var Worker */
   private $stats_notifications;
 
   /** @var MockObject */
